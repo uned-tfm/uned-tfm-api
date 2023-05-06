@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon",
     "dev": "nodemon -r dotenv/config",
+    "scrapper": "npx ts-node download-data/scrapper.ts",
     "build": "tsc --project .",
     "format:fix": "pretty-quick --pattern \"src/**/*.ts\" --staged",
     "format": "prettier --write \"src/**/*.ts\"",
@@ -17,6 +18,7 @@
   },
   "author": "Jesús Bintaned Basa",
   "dependencies": {
+    "axios": "1.4.0",
     "body-parser": "1.20.1",
     "cors": "2.8.5",
     "dotenv": "9.0.2",
@@ -26,6 +28,7 @@
     "helmet": "4.0.0",
     "http-status-codes": "1.4.0",
     "jsonwebtoken": "8.5.1",
+    "mongodb": "5.3.0",
     "morgan": "1.10.0"
   },
   "devDependencies": {
