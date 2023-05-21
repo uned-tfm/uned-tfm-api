@@ -6,7 +6,6 @@
   "scripts": {
     "start": "nodemon",
     "dev": "nodemon -r dotenv/config",
-    "scrapper": "npx ts-node download-data/scrapper.ts",
     "build": "tsc --project .",
     "format:fix": "pretty-quick --pattern \"src/**/*.ts\" --staged",
     "format": "prettier --write \"src/**/*.ts\"",
