@@ -31,27 +31,4 @@ export class EnumValueObject extends StringValueObject {
 
     return new EnumValueObject(value);
   }
-
-  static initiateOptional<Enum extends GenericEnum>(
-    property: string,
-    value: string,
-    enumList: Enum
-  ): EnumValueObject | undefined {
-    if (isNil(value) || isEmpty(value)) {
-      return undefined;
-    }
-
-    if (!isString(value)) {
-      throw new FieldValidationError(`Property ${property} must be a string`);
-    }
-
-    const isValidType = Object.values<string>(enumList).includes(value);
-    if (hasValue(value) && !isValidType) {
-      throw new FieldValidationError(
-        `Value of StringValueObject must be one of ${Object.values(enumList)}`
-      );
-    }
-
-    return new EnumValueObject(value);
-  }
 }
