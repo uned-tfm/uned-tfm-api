@@ -2,7 +2,7 @@
   "name": "uned-tfm-api",
   "version": "0.5.1",
   "description": "",
-  "main": "src/apps/index.ts",
+  "main": "src/apps/malware-api/index.ts",
   "scripts": {
     "start": "nodemon",
     "dev": "nodemon -r dotenv/config",
@@ -27,8 +27,8 @@
     "helmet": "4.0.0",
     "http-status-codes": "1.4.0",
     "jsonwebtoken": "8.5.1",
-    "mongodb": "5.3.0",
-    "morgan": "1.10.0"
+    "morgan": "1.10.0",
+    "pg": "8.11.0"
   },
   "devDependencies": {
     "@types/body-parser": "1.19.0",
@@ -40,6 +40,7 @@
     "@types/jsonwebtoken": "8.5.1",
     "@types/morgan": "1.9.2",
     "@types/node": "17.0.23",
+    "@types/pg": "8.6.6",
     "@typescript-eslint/eslint-plugin": "5.16.0",
     "@typescript-eslint/parser": "5.16.0",
     "eslint": "8.12.0",

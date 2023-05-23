@@ -1,5 +1,1 @@
-export type UseCaseRequest<Input> = {
-  input?: Input;
-};
-
-export type UseCase<Input, Response> = (request: UseCaseRequest<Input>) => Promise<Response>;
+export type UseCase<Input, Response> = (input?: Input) => Promise<Response>;
