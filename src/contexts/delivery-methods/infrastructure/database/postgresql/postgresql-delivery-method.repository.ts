@@ -24,8 +24,8 @@ export function postgresqlDeliveryMethodRepositoryBuilder({
       return [];
     }
 
-    return result.rows.map((malwareEvolution: DeliveryMethodPostgresDTO) =>
-      mapper.fromDTO(malwareEvolution)
+    return result.rows.map((deliveryMethod: DeliveryMethodPostgresDTO) =>
+      mapper.fromDTO(deliveryMethod)
     );
   }
 
