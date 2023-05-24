@@ -19,8 +19,7 @@ describe('Delivery method entity', () => {
         DeliveryMethod.create({
           malwareType: 'Arkei',
           fileType: 'dll',
-          country: 'ES',
-          count: 2021
+          country: 'ES'
         } as unknown as Primitives<DeliveryMethodProperties>)
       ).toThrow(FieldValidationError);
     });

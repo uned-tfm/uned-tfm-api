@@ -6,7 +6,7 @@ export type DeliveryMethodProperties = {
   fileType?: StringValueObject;
   malwareType?: StringValueObject;
   country?: StringValueObject;
-  deliveryMethod: StringValueObject;
+  deliveryMethod?: StringValueObject;
   count: NumberValueObject;
 };
 
@@ -15,7 +15,7 @@ export class DeliveryMethod extends Entity<DeliveryMethodProperties> {
     return {
       fileType: this.props.fileType?.value,
       malwareType: this.props.malwareType?.value,
-      deliveryMethod: this.props.deliveryMethod.value,
+      deliveryMethod: this.props.deliveryMethod?.value,
       country: this.props.country?.value,
       count: this.props.count.value
     };
@@ -26,7 +26,7 @@ export class DeliveryMethod extends Entity<DeliveryMethodProperties> {
       fileType: StringValueObject.createOptional('fileType', props.fileType),
       malwareType: StringValueObject.createOptional('malwareType', props.malwareType),
       country: StringValueObject.createOptional('country', props.country),
-      deliveryMethod: StringValueObject.create('deliveryMethod', props.deliveryMethod),
+      deliveryMethod: StringValueObject.createOptional('deliveryMethod', props.deliveryMethod),
       count: NumberValueObject.create('count', props.count, { minValue: 0 })
     });
   }
