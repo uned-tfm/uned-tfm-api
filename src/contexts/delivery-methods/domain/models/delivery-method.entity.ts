@@ -13,10 +13,10 @@ export type DeliveryMethodProperties = {
 export class DeliveryMethod extends Entity<DeliveryMethodProperties> {
   get value(): Primitives<DeliveryMethodProperties> {
     return {
-      fileType: this.props.fileType.value,
-      malwareType: this.props.malwareType.value,
+      fileType: this.props.fileType?.value,
+      malwareType: this.props.malwareType?.value,
       deliveryMethod: this.props.deliveryMethod.value,
-      country: this.props.country.value,
+      country: this.props.country?.value,
       count: this.props.count.value
     };
   }
