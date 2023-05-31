@@ -5,7 +5,7 @@ WORKDIR /tfm-malware-api
 RUN npm install -g npm@7.24.0
 RUN npm install -g pm2
 
-COPY ../dist/ /tfm-malware-api
+COPY ../build/ /tfm-malware-api
 COPY ../package.json /tfm-malware-api
 
 RUN npm install --unsafe-perm
