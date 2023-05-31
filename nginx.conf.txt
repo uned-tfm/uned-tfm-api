@@ -8,7 +8,7 @@ server {
   listen 443 ssl;
   server_name master-uned.jebiba.es localhost;
 
-  root /home/ubuntu/www/malware-webapp;
+  root /home/jebiba/www/malware-webapp;
   index index.html;
 
   access_log /var/log/nginx/app-nock-payment.access.log;
