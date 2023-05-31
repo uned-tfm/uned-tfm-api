@@ -6,16 +6,16 @@ client_max_body_size 5M;
 
 server {
   listen 443 ssl;
-  server_name app.acceptable.legal localhost;
+  server_name master-uned.jebiba.es localhost;
 
-  root /home/ubuntu/acceptable-apps/acceptable-webapp;
+  root /home/ubuntu/www/malware-webapp;
   index index.html;
 
   access_log /var/log/nginx/app-nock-payment.access.log;
   error_log /var/log/nginx/app-nock-payment.error.log debug;
 
-  ssl_certificate /etc/letsencrypt/live/app.acceptable.legal/fullchain.pem;
-  ssl_certificate_key /etc/letsencrypt/live/app.acceptable.legal/privkey.pem;
+  ssl_certificate /etc/letsencrypt/live/master-uned.jebiba.es/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/master-uned.jebiba.es/privkey.pem;
 
   location / {
     try_files $uri $uri/ /index.html;
@@ -33,7 +33,7 @@ server {
 
 server {
   listen 80;
-  server_name app.acceptable.legal localhost;
-  return 301 https://app.acceptable.legal$request_uri;
+  server_name master-uned.jebiba.es localhost;
+  return 301 https://master-uned.jebiba.es$request_uri;
 }
 
