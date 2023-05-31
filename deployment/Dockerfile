@@ -2,7 +2,7 @@ FROM node:16.10.0
 
 WORKDIR /tfm-malware-api
 
-RUN npm install -g npm@9.6.7
+RUN npm install -g npm@7.24.0
 RUN npm install -g pm2
 
 COPY ../dist/ /tfm-malware-api
