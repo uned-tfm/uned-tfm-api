@@ -37,12 +37,12 @@ export function postgresqlDeliveryMethodRepositoryBuilder({
     },
     async findByMalwareType(): Promise<DeliveryMethod[]> {
       return find(
-        'select malware_type, delivery_method, count(*) from malware.malware_data_filtered GROUP BY malware_type, delivery_method ORDER BY malware_type asc, count(*) desc'
+        'select malware_type, delivery_method, count(*) from malware.malware_data_filtered WHERE year = 2022 GROUP BY malware_type, delivery_method ORDER BY malware_type asc, count(*) desc'
       );
     },
     async findByFileType(): Promise<DeliveryMethod[]> {
       return find(
-        'select file_type, delivery_method, count(*) from malware.malware_data_filtered GROUP BY file_type, delivery_method ORDER BY file_type asc, count(*) desc'
+        'select file_type, delivery_method, count(*) from malware.malware_data_filtered WHERE year = 2022 GROUP BY file_type, delivery_method ORDER BY file_type asc, count(*) desc'
       );
     }
   };
