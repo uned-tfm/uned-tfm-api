@@ -12,7 +12,7 @@ fi
 
 if [ $1 == "docker_up" ]; then
   # 1. Creamos el contenedor de node 16.10 y compilamos el proyecto.
-  docker run --name tfm_malware_node -v $(pwd):/tfm_malware -it node:16.10 bash -c "sh /tfm_malware/tfm-malware.build.sh"
+  docker run --name tfm_malware_node -v $(pwd)/../:/tfm_malware -it node:16.10 bash -c "sh /tfm_malware/tfm-malware.build.sh"
 
   # 2. Eliminamos el contenedor y la imagen.
   docker rm tfm_malware_node
