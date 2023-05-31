@@ -6,7 +6,7 @@ if [ $# -lt 1 ]; then
 fi
 
 if [ $1 == "docker_down" ]; then
-  docker-compose -f ./deployment/docker-compose.yml down
+  docker-compose -f docker-compose.pro.yml down
   exit 1
 fi
 
@@ -19,6 +19,6 @@ if [ $1 == "docker_up" ]; then
   docker rmi node:16.10
 
   # 3. Desplegamos el proyecto.
-  docker-compose -f ./deployment/docker-compose.yml up --build -d
+  docker-compose -f docker-compose.pro.yml up --build -d
   exit 1
 fi
