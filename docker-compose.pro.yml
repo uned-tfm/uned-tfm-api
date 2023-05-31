@@ -20,7 +20,7 @@ services:
     container_name: tfm-malware-api
     restart: always
     build:
-      context: deployment
+      context: .
       dockerfile: Dockerfile
     command: ["./wait-for-it.sh", "postgres:5432", "--", "pm2-runtime", "start", "pm2.config.js"]
     volumes:
