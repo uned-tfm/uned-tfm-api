@@ -11,8 +11,8 @@ server {
   root /home/jebiba/www/malware-webapp;
   index index.html;
 
-  access_log /var/log/nginx/app-nock-payment.access.log;
-  error_log /var/log/nginx/app-nock-payment.error.log debug;
+  access_log /var/log/nginx/app-malware-api.access.log;
+  error_log /var/log/nginx/app-malware-api.error.log debug;
 
   ssl_certificate /etc/letsencrypt/live/master-uned.jebiba.es/fullchain.pem;
   ssl_certificate_key /etc/letsencrypt/live/master-uned.jebiba.es/privkey.pem;
